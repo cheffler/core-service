@@ -1,0 +1,37 @@
+version: "3"
+
+services:
+  core:
+    container_name: core-service
+    image: node:12-alpine
+    restart: always
+    user: node
+    working_dir: /opt/core-service
+    environment:
+      NODE_ENV: development
+    volumes:
+      - ../:/opt/core-service
+    ports:
+      - 2000:2000
+    command: "npm run dev"
+
+  db:
+    container_name: core-db
+    image: postgres:13-alpine
+    restart: always
+    volumes:
+      - ../data/postgresql:/opt/data/postgresql
+    environment:
+      POSTGRES_DB: core
+      POSTGRES_USER: core-service
+      POSTGRES_PASSWORD: example
+      PGDATA: /opt/data/postgresql/pgdata
+    ports:
+      - 5432:5432
+
+  adminer:
+    container_name: "adminer"
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080

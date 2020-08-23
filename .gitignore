@@ -1,5 +1,11 @@
-# Coverage directory used by tools like istanbul
+# Development
+data
+
+# Testing
 coverage
 
 # Dependency directory
 node_modules
+
+# IDE
+.vscode
