@@ -1,6 +1,15 @@
-# Part 1 - Initial Decisions and Setup
+# Part 1 - Initial Decisions and Setup <!-- omit in toc -->
 
 This blog is about building a core service that provides the key functionality, features and APIs needed to for an authenticated platform. By service, I mean an application/server that provides web APIs that a website can call to get, create, update and delete data. This service will provide the core APIs needed for an authenticated website using a *modular monolith* design, allowing easy migration to a microservices architecture.
+
+- [Initial Decisions](#initial-decisions)
+- [Setup](#setup)
+  - [Development Decisions](#development-decisions)
+  - [Folders](#folders)
+- [Dependencies](#dependencies)
+  - [Main](#main)
+  - [Development](#development)
+- [Done](#done)
 
 ## Initial Decisions
 
@@ -80,7 +89,9 @@ To start we create a set of folders, not all will be used immediately.
 | `services` | Individual folders for each service that will be added, e.g. `user`. This folder will contain everything it needs |
 | `tests`    | Component and integration tests, not unit tests                                                                   |
 
-## Installation
+## Dependencies
+
+### Main
 
 Having made the above decisions and building the folders, lets get started by installing all the bits and pieces we need. Of course, all of this is in the `package.json` file for you.
 
@@ -101,7 +112,24 @@ First, the main dependencies we want to use.
 | [sequelize](http://sequelize.org/)                             | ORM for databases                         |
 | [winston](https://github.com/winstonjs/winston)                | Logging                                   |
 
-The above are recommended from my own experience and from various best practice guides. When you can, take some time to read about each of these and its purpose.
+The above are recommended from my own experience and from various best practice guides. When you can, take some time to read about each of these and its purpose. I used to install `lodash` as well, for utilities, but now that it is split up, we can get what we need as we encounter the need.
+
+```sh
+npm install ajv \
+            compression \
+            config \
+            express \
+            helmet \
+            http-terminator \
+            lightship \
+            moment \
+            morgan \
+            passport \
+            sequelize \
+            winston
+```
+
+### Development
 
 Now we can install and configure the development tools.
 
@@ -111,4 +139,14 @@ Now we can install and configure the development tools.
 | [jest](https://jestjs.io/)     | Testing                   |
 | [nodemon](https://nodemon.io/) | Restart server on changes |
 
-I have prettier installed in my IDE (vs-code), so I have included a config file for this.
+I have prettier installed in my IDE (vs-code), so I have included a config file for this as well as a base `eslint` file.
+
+```sh
+npm install --save-dev eslint jest nodemon
+```
+
+---
+
+## Done
+
+That is it for part 1, not a lot of detail just yet. Spend some extra time reviewing the packages and perhaps reading some expressJS best practice. As you may be able to predict, there is a lot of boiler plate, foundation coding, to do before we get to the point we can start building APIs. You can skip all of this and jump to part # (to be linked) if you want, or follow along as we look to build the base app with all the bells and whistles we need.
