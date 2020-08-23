@@ -2,11 +2,14 @@
   "name": "core-service",
   "version": "1.0.0",
   "description": "This repository contains a NodeJS app that aims to provide the core services needed for a more full scale application.",
-  "main": "index.js",
+  "main": "app/index.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
+    "dev": "nodemon app/",
+    "start:dev": "docker-compose -f docker/development.yml up -d",
+    "stop:dev": "docker-compose -f docker/development.yml down",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

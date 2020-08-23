@@ -9,7 +9,7 @@ Branches will be kept to show the progression of different phases of work.
 The development of this service is split into parts to point out the decisions and thoughts that go into the development of the service.
 
 1. [Initial Decisions and Setup](docs/PART-1.md)
-2. Docker & Development Setup
+2. [Docker & Development Setup](docs/PART-2.md)
 3. Base Application
    1. security
    2. logging
