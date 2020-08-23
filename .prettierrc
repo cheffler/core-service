@@ -1,0 +1,13 @@
+{
+  "singleQuote": true,
+  "bracketSpacing": true,
+  "trailingComma": "all",
+  "overrides": [
+    {
+      "files": "LICENSE",
+      "options": {
+        "parser": "markdown"
+      }
+    }
+  ]
+}
