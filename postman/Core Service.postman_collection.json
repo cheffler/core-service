@@ -1,0 +1,22 @@
+{
+	"info": {
+		"_postman_id": "9e99e58e-0e17-4f2a-b9d4-b7b10ad08dac",
+		"name": "Core Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "First API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				},
+				"description": "Request to check first API created in part 2 when setting up the development environment. The API call can use any method to any API and should return \"Hello World!\""
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
