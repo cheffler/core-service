@@ -16,6 +16,7 @@ The development of this service is split into parts to point out the decisions a
    3. health
    4. startup & shutdown
    5. configuration
+   6. https
 4. Unit Tests
 5. Component Tests
 6. Service Definition
