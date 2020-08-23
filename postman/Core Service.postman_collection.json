@@ -11,7 +11,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "{{service_protocol}}://{{service_url}}:{{service_port}}/",
+					"protocol": "{{service_protocol}}",
+					"host": [
+						"{{service_url}}"
+					],
+					"port": "{{service_port}}",
+					"path": [
+						""
+					]
 				},
 				"description": "Request to check first API created in part 2 when setting up the development environment. The API call can use any method to any API and should return \"Hello World!\""
 			},
