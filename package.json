@@ -1,0 +1,45 @@
+{
+  "name": "core-service",
+  "version": "1.0.0",
+  "description": "This repository contains a NodeJS app that aims to provide the core services needed for a more full scale application.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cheffler/core-service.git"
+  },
+  "keywords": [],
+  "author": "James Leffler jsleffler@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cheffler/core-service/issues"
+  },
+  "homepage": "https://github.com/cheffler/core-service#readme",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "dependencies": {
+    "ajv": "^6.12.4",
+    "compression": "^1.7.4",
+    "config": "^3.3.1",
+    "express": "^4.17.1",
+    "helmet": "^4.1.0",
+    "http-terminator": "^2.0.3",
+    "lightship": "^6.1.0",
+    "moment": "^2.27.0",
+    "morgan": "^1.10.0",
+    "passport": "^0.4.1",
+    "sequelize": "^6.3.4",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "eslint": "^7.7.0",
+    "jest": "^26.4.2",
+    "nodemon": "^2.0.4"
+  }
+}
