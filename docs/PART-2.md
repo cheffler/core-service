@@ -18,6 +18,8 @@ To continue with this part, please ensure you have installed Docker, Docker Comp
 First we will write a base docker compose file that will get a NodeJS v12 image and run our service using `nodemon` as the entry point. Below is the copied `hello_world` example from ExpressJS that has been placed in `app/index.js` to give us something to work with.
 
 ```js
+// app/index.js
+
 const express = require('express')
 const app = express()
 const port = 2000
@@ -34,6 +36,8 @@ app.listen(port, () => {
 We now create the `development.yml` file in `docker` folder, this is where we will write our [Docker Compose](https://docs.docker.com/compose/) code to spin up the images needed for development. Have a look at the hub for [NodeJS images](https://hub.docker.com/_/node), we will simply use a tag to select version 12 and alpine, alpine is simply a small lightweight version. Then reviewing the [docs](https://github.com/nodejs/docker-node/blob/master/README.md#how-to-use-this-image) we will setup the volumes etc.
 
 ```yml
+# docker/development.yml
+
 version: "3"
 
 services:
@@ -63,6 +67,8 @@ The command will be added to the `package.json` soon, it will link to nodemon an
 Update the package.json scripts section with the three new commands.
 
 ```json
+// package.json
+
 "scripts": {
   "dev": "nodemon app/", // What is run inside docker
   "start:dev": "docker-compose -f docker/development.yml up -d",  // Start the development in detached mode (wont see any logs)
@@ -86,6 +92,8 @@ Configure the tool to send a GET request to `localhost:2000`, you should get a r
 We know we will need a database, not immediately, but in the future and we have decided to use PostgreSQL, so we might as well get it now. Add a basic [PostGreSQL](https://hub.docker.com/_/postgres) image to the `docker/development.yml` file and modify. We modify to give us a clear location of the data if we want to do a complete delete and we add some users and databases to get us started.
 
 ```yml
+# docker/development.yml
+
 db:
   container_name: "core-db"
   image: postgres:13-alpine

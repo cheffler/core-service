@@ -24,6 +24,8 @@ Create a file `app/app.js`, in this file we will create the app object and make 
 We now write the `app.js` file to match the below, and then we can start adding the basic middleware.
 
 ```js
+// app/app.js
+
 const express = require('express');
 const app = express();
 
@@ -39,6 +41,8 @@ Security is a large and complex subject, every developer is responsible for this
 The best package to help us with this is called [helmet](https://helmetjs.github.io/), it provides simple out of the box setup to protect our application. Please read the documentation to understand each of the 11 middleware functions it adds, and the configuration. Depending on your situation, you may need to change some of the configuration. For now we simply add it as below (we installed it in [Part 1](PART-1.md)).
 
 ```js
+// app/app.js
+
 /** previous requires */
 const helmet = require('helmet');
 
@@ -55,6 +59,8 @@ We wont go into full blown logging just yet, we will when we start writing our o
 We will use a package called [morgan](https://github.com/expressjs/morgan#readme) to apply the basic setup for this. We may revisit this later on to change it a little to give us more information.
 
 ```js
+// app/app.js
+
 /** previous requires */
 const morgan = require('morgan');
 
@@ -74,6 +80,8 @@ Compression is a good performance enhancement, it will *"zip"* each of your resp
 We will use the aptly named [compression](https://github.com/expressjs/compression#readme) library, and like the other middleware so far, we will hold off on any specific configuration until we have to.
 
 ```js
+// app/app.js
+
 /** previous requires */
 const compression = require('compression');
 
@@ -99,6 +107,8 @@ This data can come in several formats from the client, normally we will use JSON
 To get this information out of the request and into a usable format, we will use some builtin (to express) middleware.
 
 ```js
+// app/app.js
+
 /** previous requires */
 
 // Add middleware and configuration here
