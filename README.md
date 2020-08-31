@@ -15,18 +15,18 @@ The development of this service is split into parts to point out the decisions a
    2. Access logging
    3. Compression
    4. Request parsing
-4. Base Application
-   1. health
+4. [Base Application](docs/PART-4.md)
+   1. https
    2. startup & shutdown
-   3. configuration
-   4. https
-5. Unit Tests
-6. Component Tests
-7. Service Definition
-8. API Design
-9. Model Design
-10. Database Integration
-11. Dependency Injection
+5. Configuration
+6. Health API
+7. Unit Tests
+8. Component Tests
+9. Service Definition
+10. API Design
+11. Model Design
+12. Database Integration
+13. Dependency Injection
 
 ## Additional Parts
 
