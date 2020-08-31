@@ -10,5 +10,7 @@ const compression = require('compression');
 app.use(helmet());
 app.use(morgan('combined'));
 app.use(compression());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 module.exports = app;
