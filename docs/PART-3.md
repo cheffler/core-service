@@ -1,6 +1,6 @@
-# Part 3 - Basic Application <!-- omit in toc -->
+# Part 3 - Base Middleware <!-- omit in toc -->
 
-Regardless of the target architecture, we will always need to build a base application layer. This is the part that takes care of setting up an HTTP(s) server, handling routing (sending request to the right code), basic actions on inbound requests and a few more bits and pieces. For our purposes, it is important that this code is generic and easy to copy over to create a new service quickly, this is key to the success of a modular monolith.
+Regardless of the target architecture, we will always need to build a base application layer. This is the part that takes care of setting up an HTTP(s) server, handling routing (sending request to the right code), initial actions on inbound requests and a few more bits and pieces. For our purposes, it is important that this code is generic and easy to copy over to create a new service quickly, this is key to the success of a modular monolith.
 
 As we are using [Express](https://expressjs.com/) as our base, we will be using the concept of `middleware`. This concept takes some time to grasp, but when combined with some of the features of JavaScript, it becomes very useful. We will go into more detail on this later.
 

@@ -1,6 +1,6 @@
-# Base Service <!-- omit in toc -->
+# Part 4 - Base Application <!-- omit in toc -->
 
-In part 3 we built our app but adding key middleware useful for all routes (aka APIs). An app is a part of a service, it handles the routing and middleware, whereas the service will handle other things like http/https, startup/shutdown and configuration.
+In part 3 we built our base app by adding key middleware useful for all routes (aka APIs). Now we will add more features to the base application by adding https, a boot sequence and a shutdown sequence.
 
 - [HTTPs](#https)
   - [Making a Certificate](#making-a-certificate)
