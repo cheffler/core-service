@@ -10,12 +10,12 @@ The development of this service is split into parts to point out the decisions a
 
 1. [Initial Decisions and Setup](docs/PART-1.md)
 2. [Docker & Development Setup](docs/PART-2.md)
-3. [Base Application Middleware](docs/PART-3.md)
+3. [Base Middleware](docs/PART-3.md)
    1. Response security
    2. Access logging
    3. Compression
    4. Request parsing
-4. Base Application
+4. [Base Application](docs/PART-4.md)
    1. health
    2. startup & shutdown
    3. configuration
