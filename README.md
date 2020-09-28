@@ -10,19 +10,23 @@ The development of this service is split into parts to point out the decisions a
 
 1. [Initial Decisions and Setup](docs/PART-1.md)
 2. [Docker & Development Setup](docs/PART-2.md)
-3. Base Application
-   1. security
-   2. logging
-   3. health
-   4. startup & shutdown
-   5. configuration
-4. Unit Tests
-5. Component Tests
-6. Service Definition
-7. API Design
-8. Model Design
-9. Database Integration
-10. Dependency Injection
+3. Base Middleware
+   1. Response security
+   2. Access logging
+   3. Compression
+   4. Request parsing
+4. Base Application
+   1. health
+   2. startup & shutdown
+   3. configuration
+   4. https
+5. Unit Tests
+6. Component Tests
+7. Service Definition
+8. API Design
+9. Model Design
+10. Database Integration
+11. Dependency Injection
 
 ## Additional Parts
 
@@ -31,3 +35,6 @@ The development of this service is split into parts to point out the decisions a
 - Middleware
 - CI/CD
 - Deployment & Artefacts
+- Log Aggregation & Request Tracing
+- Performance testing
+- Configuration management
